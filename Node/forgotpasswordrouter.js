@@ -16,12 +16,12 @@ app.post('/password',async (req,res)=>{
                 service:'gmail',
                 host:'smtp.gmail.com',
                 auth:{
-                    user:'akashsahu410@gmail.com',
-                    pass:'linkedin12'
+                    user:'email@gmail.com',
+                    pass:'password'
                 }
             });
             let mailOptions={
-                from:'akashsahu410@gmail.com',
+                from:'email@gmail.com',
                 to:req.body.email,
                 subject:'Forgot Password',
                 html:"<a href='http://localhost:8081/forgot/verify/" +resultfromapi[0]._id+"'>Click on link</a> to verify"
